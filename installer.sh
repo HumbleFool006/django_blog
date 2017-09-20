@@ -125,8 +125,8 @@ install_packages(){
 use_pip_install(){
 	print_console "* Installing packages using pip"
 	$VENV_PIP_CMD install psutil 2>&1>/dev/null
-	$VENV_PIP_CMD install docker-py==1.10.6 2>&1>/dev/null
 	$VENV_PIP_CMD install requests 2>&1>/dev/null
+	$VENV_PIP_CMD install docker-py 2>&1>/dev/null
 	print_done
 }
 
