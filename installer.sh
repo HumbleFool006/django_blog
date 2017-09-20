@@ -7,7 +7,7 @@ WARNING=1
 FAILURE=2
 S247_HOME="/opt/site24x7"
 VENV_HOME="$S247_HOME/venv"
-DOWNLOADER_CMD='curl --progress-bar -LO'
+DOWNLOADER_CMD='curl --progress-bar -LO --insecure'
 print_green() {
     printf "\033[32m%s\033[0m\n" "$*"
 }
