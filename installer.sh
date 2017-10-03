@@ -127,6 +127,8 @@ use_pip_install(){
 	$VENV_PIP_CMD install psutil 2>&1>/dev/null
 	$VENV_PIP_CMD install requests 2>&1>/dev/null
 	$VENV_PIP_CMD install docker-py 2>&1>/dev/null
+	$VENV_PIP_CMD install pyparsing 2>&1>/dev/null
+	$VENV_PIP_CMD install pycrypto 2>&1>/dev/null
 	print_done
 }
 
