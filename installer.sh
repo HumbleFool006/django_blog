@@ -140,10 +140,11 @@ main(){
 	set_py_variables
 	install_packages
 	use_pip_install
-	$DOWNLOADER_CMD https://raw.githubusercontent.com/HumbleFool006/django_blog/master/daemon.py
+	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/agent_framework.tar.gz
 	mkdir monagent
-	cp  daemon.py monagent
-	$VENV_PYTHON_CMD daemon.py &
+	cp  agent_framework.tar.gz monagent
+	tar -zxf agent_framework.tar.gz
+	#$VENV_PYTHON_CMD daemon.py &
 }
 
 main
