@@ -148,7 +148,8 @@ main(){
 	cp  agent_framework.tar.gz monagent
 	cd monagent
 	tar -zxf agent_framework.tar.gz
-	#$VENV_PYTHON_CMD daemon.py &
+	touch agent_framework/source/python3.3/src/com/manageengine/virtual_env
+	$VENV_PYTHON_CMD agent_framework/source/python3.3/src/com/manageengine/monagent/MonitoringAgent.py  &
 }
 
 main
