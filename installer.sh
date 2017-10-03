@@ -140,7 +140,7 @@ main(){
 	set_py_variables
 	install_packages
 	use_pip_install
-	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/agent_framework.tar.gz
+	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/raw/master/agent_framework.tar.gz
 	mkdir monagent
 	cp  agent_framework.tar.gz monagent
 	tar -zxf agent_framework.tar.gz
