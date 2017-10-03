@@ -142,8 +142,10 @@ main(){
 	use_pip_install
 	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/agent_framework.tar.gz?raw=true
 	mkdir monagent
-	cp  agent_framework.tar.gz?raw=true monagent
-	tar -zxf agent_framework.tar.gz?raw=true
+	mv agent_framework.tar.gz?raw=true agent_framework.tar.gz
+	cp  agent_framework.tar.gz monagent
+	cd monagent
+	tar -zxf agent_framework.tar.gz
 	#$VENV_PYTHON_CMD daemon.py &
 }
 
