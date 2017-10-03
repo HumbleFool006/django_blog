@@ -143,12 +143,12 @@ main(){
 	set_py_variables
 	install_packages
 	use_pip_install
-	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/agent_framework.tar.gz?raw=true
+	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/agent_framework.zip?raw=true
 	mkdir monagent
-	mv agent_framework.tar.gz?raw=true agent_framework.tar.gz
-	cp  agent_framework.tar.gz monagent
+	mv agent_framework.zip?raw=true agent_framework.zip
+	cp  agent_framework.zip monagent
 	cd monagent
-	tar -zxf agent_framework.tar.gz
+	unzip agent_framework.zip
 	touch agent_framework/source/python3.3/src/com/manageengine/virtual_env
 	$VENV_PYTHON_CMD agent_framework/source/python3.3/src/com/manageengine/monagent/MonitoringAgent.py  &
 }
