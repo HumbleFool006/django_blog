@@ -107,14 +107,15 @@ set_py_variables(){
 
 install_packages(){
 	print_console "* Setting up setuptools"
-	$DOWNLOADER_CMD https://bootstrap.pypa.io/ez_setup.py
+	$DOWNLOADER_CMD https://raw.githubusercontent.com/HumbleFool006/django_blog/master/ez_setup.py
 	$VENV_PYTHON_CMD "ez_setup.py" --version="$SETUPTOOLS_VERSION" --to-dir=$S247_HOME
 	rm -f "$S247_HOME/setuptools-$SETUPTOOLS_VERSION.zip"
 	rm -f "$S247_HOME/ez_setup.py"
 	rm -f "$S247_HOME/ez_setup.pyc"
 	print_done
 	print_console "* Setting up pip"
-	$DOWNLOADER_CMD https://bootstrap.pypa.io/get-pip.py
+	$DOWNLOADER_CMD https://github.com/HumbleFool006/django_blog/blob/master/get-pip.py?raw=true
+	mv get-pip.py?raw=true get-pip.py
 	$VENV_PYTHON_CMD get-pip.py
 	$VENV_PIP_CMD install "pip==$PIP_VERSION"
 	rm -f get-pip.py
