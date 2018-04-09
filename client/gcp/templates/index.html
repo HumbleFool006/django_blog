@@ -11,16 +11,44 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
-		<script src="./js/app.js"></script>
+		<script src="static/js/app.js"></script>
+		<script src="static/js/app-router.js"></script>
+		<script src="static/js/app-controller.js"></script>
 	</head>
 	<body>
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-				<h1>Google Cloud Platform Monitoring</h1>
+		<div class="row">
+			<div class="col-sm-12 well">
+				<a ui-sref="">header</a>
 			</div>
 		</div>
-		<div class="container">
-			<ui-view></ui-view>
+		<div class="row">
+			<div class="col-sm-3 well" style="height:auto; min-height: 100% !important">
+				<ul>
+					<ol>
+						<a ui-sref="login()">Login</a>
+					</ol>
+					<hr>
+					<ol>
+						<a ui-sref="signup()">Signup</a>
+					</ol>
+					<hr>
+					<ol>
+						<a ui-sref="about()">About</a>
+					</ol>
+					<hr>
+					<ol>
+						<a ui-sref="review()">Review</a>
+					</ol>
+					<hr>
+					<ol>
+						<a ui-sref="list_reviews()">See Reviews</a>
+					</ol>	
+				</ul>
+			</div>
+			<div class="col-sm-9" style="height:auto; min-height: 100% !important">
+				<ui-view></ui-view>
+			</div>
 		</div>
+		
 	</body>
 </html>
