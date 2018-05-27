@@ -49,3 +49,30 @@ app.controller('reviewListCtrl', ['$scope', '$http', '$httpParamSerializer', fun
 	}
 	sc.getData();
 	}]);
+app.controller("loginCtrl", ["$scope", "$http", "$httpParamSerializer", function(sc, http, ser){
+	sc.postData=function(){
+		http({
+			url:"login",
+			method:"POST",
+			data:ser(sc.form)
+		}).success(function(data, status, headers, config){
+			sc.resp = data;
+		}).error(function(data, status, headers, config){
+			sc.resp = data;
+		});
+	}
+}]);
+app.controller('signupCtrl', ["$scope", "$http", "$httpParamSerializer", "$window", function(sc, http, ser, win){
+	sc.postData=function(){
+		http({
+			url:"signup",
+			data:ser(sc.form),
+			method:"POST"
+		}).success(function(data, status, headers, config){
+			sc.resp = data;
+			win.location.href = '#/list_reviews';
+		}).error(function(data, status, headers, config){
+			sc.resp = data;
+		});
+	}
+}])

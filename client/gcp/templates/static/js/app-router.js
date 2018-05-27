@@ -2,13 +2,14 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 	$urlRouterProvider.otherwise("/");
 	$stateProvider.state("login", {
 		url:"/",
-		templateUrl:"static/templates/login.html"
+		templateUrl:"static/templates/login.html",
+		controller:"loginCtrl"
 	});
 
 	$stateProvider.state("signup",{
 		url:"/signup",
 		templateUrl:"static/templates/signup.html",
-		controller:"SignUpCtrl"
+		controller:"signupCtrl"
 	});
 
 	$stateProvider.state('about', {

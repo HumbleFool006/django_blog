@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
+from django.contrib.auth import views as auth_views
 from .views import index
+from review.views import (login_view, signup_view)
 urlpatterns = [
     path('', index),
+    re_path('^login$', login_view),
+    re_path('^signup$', signup_view),
     re_path('^api/gcpmon/', include('monitoring.urls')),
     re_path('^api/review/', include('review.urls')),
     path('admin/', admin.site.urls),
